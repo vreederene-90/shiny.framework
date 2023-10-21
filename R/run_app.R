@@ -12,12 +12,13 @@ run_app <- function(config_file) {
       value = "database",
       config = "local"))
 
-  ui <- shiny::fluidPage(tag_test())
+  ui <- fluidPage(mod_example_ui("mod_example"))
 
   server <- function(input,output,session) {
 
-    cat("> conn ok?",DBI::dbCanConnect(odbc::odbc(), "local"))
+    mod_example_server(id = "mod_example", conn = conn)
+
   }
 
-  shiny::shinyApp(ui,server)
+  shinyApp(ui,server)
 }

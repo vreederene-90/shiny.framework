@@ -1,3 +1,4 @@
+# local database is defined via dsn
 default:
   database: "<not defined>"
 local:
