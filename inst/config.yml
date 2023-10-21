@@ -1,0 +1,4 @@
+default:
+  database: "<not defined>"
+local:
+  database: "local"

@@ -1,1 +1,1 @@
-tag_test <- function() {h1("testing")}
+tag_test <- function() {htmltools::h1("testing")}
