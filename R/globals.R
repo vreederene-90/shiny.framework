@@ -66,7 +66,6 @@ loadSupport <- function (appDir = NULL, renv = new.env(parent = globalenv()),
   invisible(renv)
 }
 
-
 shiny_env <- environment(shiny:::loadSupport)
 unlockBinding("loadSupport", shiny_env)
 body(shiny_env$loadSupport) <- body(loadSupport)
