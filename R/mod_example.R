@@ -3,12 +3,12 @@ mod_example_ui <- function(id) {
   htmltools::h1("mod_example")
 }
 
-mod_example_server <- function(id,pool) {
+mod_example_server <- function(id) {
   moduleServer(
     id,
     function(input,output,session) {
 
-      pool::dbGetQuery(pool, "SELECT name FROM SYS.TABLES")
+      # pool::dbGetQuery(pool, "SELECT name FROM SYS.TABLES")
 
     }
   )
